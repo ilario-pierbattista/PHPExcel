@@ -1,5 +1,5 @@
 {
-    "name": "phpoffice/phpexcel",
+    "name": "ilario-pierbattista/phpexcel",
     "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
     "keywords": ["PHP","Excel","OpenXML","xlsx","xls","spreadsheet"],
     "homepage": "https://github.com/PHPOffice/PHPExcel",
@@ -23,7 +23,7 @@
         }
     ],
     "require": {
-        "php": "^5.2|^7.0",
+        "php": "^5.2|^7.0|^7.4",
         "ext-mbstring": "*",
         "ext-xml": "*",
         "ext-xmlwriter": "*"
