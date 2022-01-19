@@ -3370,14 +3370,14 @@ class PHPExcel_Calculation
                     if ($testPrevOp['value'] == ':') {
                         $startRowColRef = $output[count($output)-1]['value'];
                         $rangeWS1 = '';
-                        if (strpos('!', $startRowColRef) !== false) {
+                        if (strpos('!', (string) $startRowColRef) !== false) {
                             list($rangeWS1, $startRowColRef) = explode('!', $startRowColRef);
                         }
                         if ($rangeWS1 != '') {
                             $rangeWS1 .= '!';
                         }
                         $rangeWS2 = $rangeWS1;
-                        if (strpos('!', $val) !== false) {
+                        if (strpos('!', (string) $val) !== false) {
                             list($rangeWS2, $val) = explode('!', $val);
                         }
                         if ($rangeWS2 != '') {

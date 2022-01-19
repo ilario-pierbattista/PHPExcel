@@ -89,7 +89,7 @@ class PHPExcel_Shared_OLE_PPS_Root extends PHPExcel_Shared_OLE_PPS
         }
         // Make an array of PPS's (for Save)
         $aList = array();
-        PHPExcel_Shared_OLE_PPS::_savePpsSetPnt($aList, array($this));
+        parent::_savePpsSetPnt($aList, array($this));
         // calculate values for header
         list($iSBDcnt, $iBBcnt, $iPPScnt) = $this->_calcSize($aList); //, $rhInfo);
         // Save Header

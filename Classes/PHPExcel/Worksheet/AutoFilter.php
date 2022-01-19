@@ -580,8 +580,9 @@ class PHPExcel_Worksheet_AutoFilter
         } else {
             sort($dataValues);
         }
+        $arraySlice = array_slice($dataValues, 0, $ruleValue);
 
-        return array_pop(array_slice($dataValues, 0, $ruleValue));
+        return array_pop($arraySlice);
     }
 
     /**
