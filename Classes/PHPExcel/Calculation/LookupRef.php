@@ -160,10 +160,8 @@ class PHPExcel_Calculation_LookupRef
         } elseif (!is_array($cellAddress)) {
             return PHPExcel_Calculation_Functions::VALUE();
         }
-
-        reset($cellAddress);
-        $isMatrix = (is_numeric(key($cellAddress)));
-        list($columns, $rows) = PHPExcel_Calculation::_getMatrixDimensions($cellAddress);
+        $isMatrix = (is_numeric(array_key_first($cellAddress)));
+        list($columns, $rows) = (new PHPExcel_Calculation())->_getMatrixDimensions($cellAddress);
 
         if ($isMatrix) {
             return $rows;
@@ -238,10 +236,8 @@ class PHPExcel_Calculation_LookupRef
         } elseif (!is_array($cellAddress)) {
             return PHPExcel_Calculation_Functions::VALUE();
         }
-
-        reset($cellAddress);
-        $isMatrix = (is_numeric(key($cellAddress)));
-        list($columns, $rows) = PHPExcel_Calculation::_getMatrixDimensions($cellAddress);
+        $isMatrix = (is_numeric(array_key_first($cellAddress)));
+        list($columns, $rows) = (new PHPExcel_Calculation())->_getMatrixDimensions($cellAddress);
 
         if ($isMatrix) {
             return $columns;
@@ -673,8 +669,7 @@ class PHPExcel_Calculation_LookupRef
 
     private static function vlookupSort($a, $b)
     {
-        reset($a);
-        $firstColumn = key($a);
+        $firstColumn = array_key_first($a);
         if (($aLower = strtolower($a[$firstColumn])) == ($bLower = strtolower($b[$firstColumn]))) {
             return 0;
         }

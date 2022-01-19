@@ -1061,7 +1061,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
             $objWriter->writeAttribute('r', $pCellAddress);
 
             // Sheet styles
-            if ($pCell->getXfIndex() != '') {
+            if ($pCell->getXfIndex() != 0) {
                 $objWriter->writeAttribute('s', $pCell->getXfIndex());
             }
 
