@@ -1,8 +1,8 @@
 {
-    "name": "ilario-pierbattista/phpexcel",
-    "description": "FORKED PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+    "name": "phpoffice/phpexcel",
+    "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
     "keywords": ["PHP","Excel","OpenXML","xlsx","xls","spreadsheet"],
-    "homepage": "https://github.com/ilario-pierbattista/PHPExcel",
+    "homepage": "https://github.com/PHPOffice/PHPExcel",
     "type": "library",
     "license": "LGPL-2.1",
     "authors": [
@@ -23,7 +23,7 @@
         }
     ],
     "require": {
-        "php": "^5.2|^7.0|^7.4",
+        "php": "^5.2|^7.0",
         "ext-mbstring": "*",
         "ext-xml": "*",
         "ext-xmlwriter": "*"
