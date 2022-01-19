@@ -202,7 +202,7 @@ class PHPExcel_Calculation
     /**
      * Number of iterations for cyclic formulae
      *
-     * @var integer
+     * @var float
      *
      */
     public $cyclicFormulaCount = 1;
